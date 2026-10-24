@@ -12,4 +12,4 @@ if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
 # Importing this module runs the Streamlit UI on the normal Streamlit script thread.
-from app.app import *  # noqa: F401,F403,E402
+import runpy; runpy.run_path(str(APP_DIR / "app.py"))
